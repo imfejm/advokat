@@ -229,3 +229,30 @@ h4 {
     margin: 2%;
   }
 }
+
+.cenik {
+  height: 30%;
+}
+.kbox {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  background-color: #07192f;
+  color: white;
+  box-shadow: 3px 2px 15px #bcb276;
+  margin-top: 7%;
+}
+.map {
+  float: right;
+  width: 30%;
+}
+.address {
+  flex-direction: column;
+  font-family: Anaheim;
+  margin-left: 3%;
+}
+h3{
+  color:#bcb276;
+  font-weight: 400;
+  margin-bottom: 2%;
+}
