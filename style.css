@@ -45,27 +45,29 @@ body {
 }
 @media only screen and (max-width: 500px) {
   .title {
-    font-size: 4vh;
+    max-width: fit-content;
+    /*font-size: 4vh;*/
+    font-size: 1.2em;
+    margin-right: 2%;
   }
-  .menu li a {
-    font-size: 3rem;
+  .menu a {
+    font-size: 2em;
+    padding: 0;
+  }
+  .menu {
+    padding: 0;
   }
   .ham {
     width: 5vh;
   }
-  
 }
 
 .menu {
-  min-width: 0;
-  display: flex;
-  gap: 4vw;
-  margin-top: 2%;
-  list-style: none;
   padding: 1%;
+  align-self: stretch;
 }
 
-.menu li a {
+.menu a {
   color: white;
   text-decoration: none;
   font-size: 2.5vw;
@@ -73,6 +75,8 @@ body {
   font-weight: 300;
   border-left: solid 1px #bcb276;
   padding-left: 0.3em;
+  padding-right: 0.2em;
+  margin: 1vw;
 }
 
 @media only screen and (max-width: 800px) {
@@ -81,17 +85,16 @@ body {
   .cenik {
     display: none;
   }
-  .kontakt {
-    color: #f0ebcf;
+  a.kontakt {
+    color: white;
     font-weight: 600;
   }
 }
 
-.kontakt {
+a.kontakt {
   color: #bcb276;
-  font-weight: 500;
+  font-weight: 300;
 }
-
 
 .ham {
   width: 5vw;
@@ -118,7 +121,7 @@ body {
   .cara1,
   .cara2,
   .cara3 {
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -146,7 +149,7 @@ body {
 }
 @media only screen and (max-width: 500px) {
   .name {
-    margin-top: 20%;
+    margin-top: 30%;
     font-size: 6vh;
   }
 }
@@ -160,10 +163,12 @@ body {
   padding: 4%;
 }
 @media only screen and (max-width: 500px) {
-  .text{font-size: 4vh;
-    padding:3%;
+  .text {
+    font-size: 4vh;
+    padding: 3%;
     width: 60vw;
-  }}
+  }
+}
 .ubox {
   width: 80vw;
   margin: 5%;
