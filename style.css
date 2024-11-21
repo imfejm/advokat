@@ -44,14 +44,7 @@ body {
   align-self: baseline;
 }
 @media only screen and (max-width: 500px) {
-  .menu a {
-    font-size: 20px;
-    padding: 0;
-  }
-  .menu {
-    padding: 0;
-  }
-
+ 
   .title {
     max-width: fit-content;
     /*font-size: 4vh;*/
@@ -60,11 +53,10 @@ body {
     border:none;
   }
 
-  /* .ham {
-    width: 5vh;
+   /*.ham {
+    width: 50px;
   }*/
 }
-
 
 .menu {
   padding: 1%;
@@ -101,6 +93,8 @@ a.kontakt {
     font-weight: 500;
   }
 }
+@media only screen and (max-width: 500px) {
+  a.kontakt{font-size:18px;font-weight: 400;}}
 
 .ham {
   width: 5vw;
@@ -155,7 +149,7 @@ a.kontakt {
 }
 @media only screen and (max-width: 500px) {
   .name {
-    margin-top: 20%;
+    margin-top: 25%;
     font-size: 6vh;
   }
 }
