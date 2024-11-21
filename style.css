@@ -152,7 +152,7 @@ a.kontakt {
 }
 @media only screen and (max-width: 500px) {
   .name {
-    margin-top: 25%;
+    margin-top: 5rem;
     font-size: 6vh;
   }
 }
