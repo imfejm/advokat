@@ -44,23 +44,27 @@ body {
   align-self: baseline;
 }
 @media only screen and (max-width: 500px) {
-  .title {
-    max-width: fit-content;
-    /*font-size: 4vh;*/
-    font-size: 1.2em;
-    margin-right: 2%;
-  }
   .menu a {
-    font-size: 2em;
+    font-size: 20px;
     padding: 0;
   }
   .menu {
     padding: 0;
   }
-  .ham {
-    width: 5vh;
+
+  .title {
+    max-width: fit-content;
+    /*font-size: 4vh;*/
+    font-size: 23px;
+    margin-right: 2%;
+    border:none;
   }
+
+  /* .ham {
+    width: 5vh;
+  }*/
 }
+
 
 .menu {
   padding: 1%;
@@ -85,15 +89,17 @@ body {
   .cenik {
     display: none;
   }
-  a.kontakt {
-    color: white;
-    font-weight: 600;
-  }
 }
 
 a.kontakt {
   color: #bcb276;
   font-weight: 300;
+}
+@media only screen and (max-width: 800px) {
+  a.kontakt {
+    color: white;
+    font-weight: 500;
+  }
 }
 
 .ham {
@@ -149,7 +155,7 @@ a.kontakt {
 }
 @media only screen and (max-width: 500px) {
   .name {
-    margin-top: 30%;
+    margin-top: 20%;
     font-size: 6vh;
   }
 }
