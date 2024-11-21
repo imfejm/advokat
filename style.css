@@ -44,16 +44,15 @@ body {
   align-self: baseline;
 }
 @media only screen and (max-width: 500px) {
- 
   .title {
     max-width: fit-content;
     /*font-size: 4vh;*/
-    font-size: 23px;
+    font-size: 25px;
     margin-right: 2%;
-    border:none;
+    border: none;
   }
 
-   /*.ham {
+  /*.ham {
     width: 50px;
   }*/
 }
@@ -94,7 +93,11 @@ a.kontakt {
   }
 }
 @media only screen and (max-width: 500px) {
-  a.kontakt{font-size:18px;font-weight: 400;}}
+  a.kontakt {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
 
 .ham {
   width: 5vw;
