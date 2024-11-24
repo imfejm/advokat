@@ -111,8 +111,11 @@ a.kontakt {
   }
 }
 @media only screen and (max-width: 500px) {
-  .ham{width:9%;
-  align-self: stretch;}
+  .ham {
+    width: 9%;
+    align-self: stretch;
+  }
+}
 
 .header {
   width: 100vw;
@@ -156,6 +159,20 @@ a.kontakt {
     font-size: 4vh;
     padding: 3%;
     width: 60vw;
+  }
+}
+
+#contact {
+  width: 10%;
+  background-color: #bcb176a9;
+  border-radius: 20%;
+  position: fixed;
+  left: 85%;
+  top: 40%;
+}
+@media only screen and (min-width: 800px) {
+  #contact {
+    display: none;
   }
 }
 .ubox {
