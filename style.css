@@ -49,10 +49,6 @@ body {
     font-size: 1.8rem;
     margin-right: 2%;
   }
-
-  /*.ham {
-    width: 50px;
-  }*/
 }
 
 .menu {
@@ -75,7 +71,8 @@ body {
 @media only screen and (max-width: 800px) {
   .uvodem,
   .sluzby,
-  .cenik {
+  .cenik,
+  .kontakt {
     display: none;
   }
 }
@@ -83,18 +80,6 @@ body {
 a.kontakt {
   color: #bcb276;
   font-weight: 300;
-}
-@media only screen and (max-width: 800px) {
-  a.kontakt {
-    color: white;
-    font-weight: 500;
-  }
-}
-@media only screen and (max-width: 500px) {
-  a.kontakt {
-    font-size: 18px;
-    font-weight: 400;
-  }
 }
 
 .ham {
@@ -125,6 +110,9 @@ a.kontakt {
     display: none;
   }
 }
+@media only screen and (max-width: 500px) {
+  .ham{width:9%;
+  align-self: stretch;}
 
 .header {
   width: 100vw;
@@ -251,8 +239,8 @@ h4 {
   font-family: Anaheim;
   margin-left: 3%;
 }
-h3{
-  color:#bcb276;
+h3 {
+  color: #bcb276;
   font-weight: 400;
   margin-bottom: 2%;
 }
