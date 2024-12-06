@@ -312,6 +312,12 @@ h4 {
     flex-direction: column;
   }
 }
+.kbox a{
+  text-decoration: none;
+}
+.kbox a :hover{
+  background-color: #bcb176;
+}
 
 .address {
   flex-direction: column;
