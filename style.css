@@ -220,6 +220,10 @@ ul {
   position: sticky;
   top: 95%;
 }
+.lineb a {
+  text-decoration: none;
+  color: #010f1f;
+}
 .ubox {
   width: 80vw;
   margin: 5%;
@@ -312,10 +316,11 @@ h4 {
     flex-direction: column;
   }
 }
-.kbox a{
+.kbox a {
   text-decoration: none;
+  color: #bcb176;
 }
-.kbox a :hover{
+.kbox a :hover {
   background-color: #bcb176;
 }
 
@@ -325,7 +330,7 @@ h4 {
   margin-left: 3%;
 }
 h3 {
-  color: #bcb276;
+  color: white;
   font-weight: 400;
   margin-bottom: 2%;
 }
