@@ -40,11 +40,12 @@ body {
   padding: 1%;
   margin-left: 3%;
   margin-right: 4%;
+  margin-top: 0;
   text-align: left;
   align-self: baseline;
 }
 @media only screen and (max-width: 500px) {
-  .title {
+  .menu {
     max-width: fit-content;
     font-size: 1.8rem;
     margin-right: 2%;
@@ -120,17 +121,18 @@ a.kontakt {
 /*navigace klik*/
 
 .nav {
-  background-color: #bcb176d6;
+  background-color: #bcb176ea;
   position: fixed;
 
   width: 40%;
   height: 100%;
   right: 0;
-  top: 4%;
+  top: 0;
+  margin-top: 0;
+  padding-top: 10rem;
 }
 ul {
   list-style: none;
-  padding: 1rem;
 }
 @media only screen and (min-width: 800px) {
   .nav {
@@ -151,10 +153,23 @@ ul {
   width: 100vw;
   background-image: linear-gradient(#010f1f, rgba(42, 40, 50, 0.5)),
     url("img/tmava.jpg");
-  background-size: cover;
+  background-size: 100%; /* výchozí velikost */
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomBackground 8s ease-out forwards;
   box-shadow: 3px 2px 15px #bcb276;
   margin-bottom: 5%;
 }
+
+@keyframes zoomBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 105%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .header {
     height: 50vh;
@@ -167,7 +182,18 @@ ul {
   font-size: 6.5vw;
   font-family: Playfair Display;
   font-weight: 200;
+  animation: zoomName 8s ease-out forwards;
 }
+
+@keyframes zoomName {
+  0% {
+    font-size: 6vw;
+  }
+  100% {
+    font-size: 6.5vw;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .name {
     margin-top: 5rem;
@@ -182,7 +208,18 @@ ul {
   font-style: italic;
   font-family: Playfair Display;
   padding: 4%;
+  opacity: 0;
+  /*transform: translateY(20px);*/
+  animation: fadeSlideIn 1s ease-out 1s forwards;
 }
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .text {
     font-size: 4vh;
@@ -191,7 +228,7 @@ ul {
   }
 }
 
-#contact {
+/*#contact {
   width: 10%;
   background-color: #bcb176a9;
   border-radius: 20%;
@@ -203,7 +240,7 @@ ul {
   #contact {
     display: none;
   }
-}
+}*/
 
 .lineb {
   background-color: #bcb17677;
@@ -222,7 +259,12 @@ ul {
 }
 .lineb a {
   text-decoration: none;
-  color: #010f1f;
+  color: #07192f;
+}
+@media only screen and (min-width: 800px) {
+  .lineb {
+    display: none;
+  }
 }
 .ubox {
   width: 80vw;
@@ -239,10 +281,16 @@ ul {
   margin: 1%;
 }
 .sbox {
-  background-color: #6168715c;
+  /* background-color: #6168715c;
   margin: 2%;
   padding: 4%;
-  width: 80vw;
+  width: 80vw; 
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;*/
+
+  transition: height 0.4s ease;
+  overflow: hidden;
 }
 
 .icon {
@@ -264,7 +312,7 @@ h4 {
 }
 @media only screen and (min-width: 500px) {
   .sluzbox {
-    gap: 3%;
+    gap: 1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -278,7 +326,7 @@ h4 {
 
 @media only screen and (min-width: 800px) {
   .sluzbox {
-    gap: 3%;
+    gap: 1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -288,6 +336,50 @@ h4 {
     width: 25vw;
     margin: 2%;
   }
+}
+
+.sbox-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.sbox.flip .sbox-inner {
+  transform: rotateY(180deg);
+}
+.sbox:not(.flip) .sbox-front {
+  display: block;
+ box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.sbox:not(.flip) {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.sbox.flip .sbox-back {
+  display: block;
+}
+.sbox-front,
+.sbox-back {
+  backface-visibility: hidden;
+  padding: 4%;
+  background-color: #6168715c;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; /* nově */
+  width: 100%;
+  display: none; /* výchozí stav – obě skryté */
+  
+}
+.sbox-back {
+  transform: rotateY(180deg);
+}
+
+.sbox-back p {
+  margin-top: 1rem;
 }
 
 .cenik {
@@ -345,4 +437,5 @@ footer {
   text-align: center;
   margin-top: 10%;
   background-color: #6168715c;
+  border-top: 1px solid #bcb176;
 }
