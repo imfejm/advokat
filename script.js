@@ -5,28 +5,10 @@ tlacitko.addEventListener("click", () => {
   rozbal.classList.toggle("hidden");
 });
 
-
-
-
-//otočení karty služeb
- 
-
-  document.querySelectorAll(".sbox").forEach((box) => {
-    const inner = box.querySelector(".sbox-inner");
-
-    box.addEventListener("click", () => {
-      const isFlipped = box.classList.contains("flip");
-
-      // reset výšky
-      box.style.height = box.offsetHeight + "px";
-
-      // přepnutí třídy
-      box.classList.toggle("flip");
-
-      // po přepnutí spočítáme novou výšku
-      requestAnimationFrame(() => {
-        const newHeight = inner.scrollHeight;
-        box.style.height = newHeight + "px";
-      });
-    });
+//otočení karty služeb - zjednodušená verze
+document.querySelectorAll(".sbox").forEach((box) => {
+  box.addEventListener("click", () => {
+    // pouze přepneme třídu pro otočení
+    box.classList.toggle("flip");
   });
+});

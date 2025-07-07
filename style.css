@@ -280,17 +280,19 @@ ul {
 .ubox p {
   margin: 1%;
 }
+
+/*karty sluzeb*/
+
 .sbox {
-  /* background-color: #6168715c;
-  margin: 2%;
-  padding: 4%;
-  width: 80vw; 
+  background-color: #707f965c;
+  margin: 0;
+  padding: 2%;
+  width: 80vw;
   perspective: 1000px;
   cursor: pointer;
-  position: relative;*/
-
-  transition: height 0.4s ease;
+  position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .icon {
@@ -298,18 +300,23 @@ ul {
   height: fit-content;
   background-color: #010f1f;
 }
+
 h4 {
   margin-top: 10%;
   color: white;
   font-family: anaheim;
   font-weight: 500;
+  font-size: 20px;
   text-decoration: overline #bcb276;
   text-shadow: 3px 1px 3px #010f1f94;
 }
+
 .law-title {
   display: flex;
   justify-content: space-between;
+  gap: 1%;
 }
+
 @media only screen and (min-width: 500px) {
   .sluzbox {
     gap: 1%;
@@ -317,6 +324,7 @@ h4 {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start; /* TOHLE je klíčové! */
   }
   .sbox {
     width: 40vw;
@@ -331,6 +339,7 @@ h4 {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: flex-start; /* TOHLE je klíčové! */
   }
   .sbox {
     width: 25vw;
@@ -344,44 +353,55 @@ h4 {
   position: relative;
   display: flex;
   flex-direction: column;
-
 }
 
 .sbox.flip .sbox-inner {
   transform: rotateY(180deg);
 }
-.sbox:not(.flip) .sbox-front {
-  display: block;
- box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-.sbox:not(.flip) {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-.sbox.flip .sbox-back {
-  display: block;
-}
+
 .sbox-front,
 .sbox-back {
   backface-visibility: hidden;
   padding: 4%;
-  background-color: #6168715c;
+  background-color: #61687153;
   box-sizing: border-box;
-  display: flex;
+  display: none; /* výchozí stav – obě skryté */
   flex-direction: column;
   justify-content: flex-start;
-  position: relative; /* nově */
+  position: relative;
   width: 100%;
-  display: none; /* výchozí stav – obě skryté */
-  
 }
+
 .sbox-back {
   transform: rotateY(180deg);
 }
 
-.sbox-back p {
-  margin-top: 1rem;
+.sbox:not(.flip) .sbox-front {
+  display: block;
 }
 
+.sbox:not(.flip) .sbox-back {
+  display: none;
+}
+
+.sbox.flip .sbox-front {
+  display: none;
+}
+
+.sbox.flip .sbox-back {
+  display: block;
+}
+
+.sbox-back p {
+  margin-top: 1rem;
+  color: #051324;
+}
+
+/*.sbox.height-transition {
+  transition: height 0.4s ease;
+}*/
+
+/*cenik*/
 .cenik {
   height: 30%;
 }
